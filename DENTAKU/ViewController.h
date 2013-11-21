@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+- (IBAction)inputNumber0:(id)sender;
 - (IBAction)inputNumber1:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UILabel *numberOutput;

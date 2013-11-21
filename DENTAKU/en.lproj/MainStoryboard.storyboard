@@ -24,7 +24,6 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kxb-Hz-Krz">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="7ml-yY-tAL"/>
-                                    <constraint firstAttribute="height" constant="70" id="yIL-j4-JBH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                 <state key="normal" title="1">
@@ -38,13 +37,33 @@
                                     <action selector="inputNumber1:" destination="2" eventType="touchUpInside" id="ohp-od-OFN"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rMd-p1-PDV">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="M1r-Bq-Rdu"/>
+                                    <constraint firstAttribute="height" constant="70" id="yTN-YD-ETg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <state key="normal" title="0">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="inputNumber0:" destination="2" eventType="touchUpInside" id="lpd-Oj-5po"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="rMd-p1-PDV" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="FJt-fN-BQk"/>
                             <constraint firstItem="ahV-W3-DUh" firstAttribute="top" secondItem="3" secondAttribute="top" constant="46" id="HOF-ku-VeI"/>
-                            <constraint firstItem="Kxb-Hz-Krz" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="M1c-U0-5Fb"/>
-                            <constraint firstItem="Kxb-Hz-Krz" firstAttribute="top" secondItem="3" secondAttribute="top" constant="249" id="aP8-bU-ekF"/>
+                            <constraint firstItem="Kxb-Hz-Krz" firstAttribute="top" secondItem="rMd-p1-PDV" secondAttribute="top" type="default" id="asV-X1-7Q2"/>
+                            <constraint firstItem="rMd-p1-PDV" firstAttribute="top" secondItem="3" secondAttribute="top" constant="249" id="awT-IO-zIv"/>
+                            <constraint firstItem="Kxb-Hz-Krz" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="qIA-LY-hs8"/>
                             <constraint firstItem="ahV-W3-DUh" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="58" id="vgy-LN-3x7"/>
+                            <constraint firstItem="Kxb-Hz-Krz" firstAttribute="bottom" secondItem="rMd-p1-PDV" secondAttribute="bottom" type="default" id="z39-nP-UlX"/>
                         </constraints>
                     </view>
                     <connections>
@@ -63,6 +82,7 @@
         <class className="ViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
             <relationships>
+                <relationship kind="action" name="inputNumber0:"/>
                 <relationship kind="action" name="inputNumber1:"/>
                 <relationship kind="outlet" name="numberOutput" candidateClass="UILabel"/>
             </relationships>
