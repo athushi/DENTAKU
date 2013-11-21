@@ -45,4 +45,23 @@
     self.numberOutput.text = print;
 }
 
+- (IBAction)inputNumber3:(id)sender {
+    NSInteger num3 =3;
+    NSString *print = [[NSString alloc]initWithFormat:@"%d",num3];
+    self.numberOutput.text = print;
+
+}
+
+- (IBAction)inputNumber4:(id)sender {
+    NSInteger num4 =4;
+    NSString *print = [[NSString alloc]initWithFormat:@"%d",num4];
+    self.numberOutput.text = print;
+}
+
+- (IBAction)inputNumber5:(id)sender {
+    NSInteger num5 =5;
+    NSString *print = [[NSString alloc]initWithFormat:@"%d",num5];
+    self.numberOutput.text = print;
+}
+
 @end
