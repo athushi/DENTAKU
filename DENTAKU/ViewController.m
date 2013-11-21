@@ -32,9 +32,17 @@
     self.numberOutput.text = print;
 }
 
+
 - (IBAction)inputNumber1:(id)sender {
     NSInteger num1 = 1;
     NSString *print = [[NSString alloc]initWithFormat:@"%d",num1];
     self.numberOutput.text = print;
 }
+
+- (IBAction)inputNumber2:(id)sender {
+    NSInteger num2 =2;
+    NSString *print = [[NSString alloc]initWithFormat:@"%d",num2];
+    self.numberOutput.text = print;
+}
+
 @end
