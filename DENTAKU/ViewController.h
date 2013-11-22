@@ -15,6 +15,10 @@
 - (IBAction)inputNumber3:(id)sender;
 - (IBAction)inputNumber4:(id)sender;
 - (IBAction)inputNumber5:(id)sender;
+- (IBAction)inputNumber6:(id)sender;
+- (IBAction)inputNumber7:(id)sender;
+- (IBAction)inputNumber8:(id)sender;
+- (IBAction)inputNumber9:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UILabel *numberOutput;
 

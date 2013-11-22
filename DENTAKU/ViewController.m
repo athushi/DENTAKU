@@ -64,4 +64,25 @@
     self.numberOutput.text = print;
 }
 
+- (IBAction)inputNumber6:(id)sender {
+    NSInteger num6 =6;
+    NSString *print = [[NSString alloc]initWithFormat:@"%d",num6];
+    self.numberOutput.text = print;
+}
+
+- (IBAction)inputNumber7:(id)sender {
+    NSInteger num7 =7;
+    NSString *print = [[NSString alloc]initWithFormat:@"%d",num7];
+    self.numberOutput.text = print;}
+
+- (IBAction)inputNumber8:(id)sender {
+    NSInteger num8 =8;
+    NSString *print = [[NSString alloc]initWithFormat:@"%d",num8];
+    self.numberOutput.text = print;}
+
+- (IBAction)inputNumber9:(id)sender {
+    NSInteger num9 =9;
+    NSString *print = [[NSString alloc]initWithFormat:@"%d",num9];
+    self.numberOutput.text = print;}
+
 @end
