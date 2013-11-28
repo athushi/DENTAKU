@@ -11,6 +11,8 @@
 @interface ViewController : UIViewController
 @property(nonatomic,assign)NSInteger buttonNumber;
 @property(nonatomic,assign)NSInteger countNumber;
+@property(nonatomic,assign)NSInteger subtotal;
+@property(nonatomic,assign)NSInteger calcFlug;
 
 - (IBAction)inputNumber0:(id)sender;
 - (IBAction)inputNumber1:(id)sender;
@@ -22,6 +24,14 @@
 - (IBAction)inputNumber7:(id)sender;
 - (IBAction)inputNumber8:(id)sender;
 - (IBAction)inputNumber9:(id)sender;
+
+
+
+- (IBAction)additionButton:(id)sender;
+- (IBAction)subtractionButton:(id)sender;
+- (IBAction)multiplicationButton:(id)sender;
+- (IBAction)divisionButton:(id)sender;
+
 
 @property (weak, nonatomic) IBOutlet UILabel *numberOutput;
 

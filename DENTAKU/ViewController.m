@@ -15,6 +15,8 @@
 @implementation ViewController
 @synthesize buttonNumber;
 @synthesize countNumber;
+@synthesize subtotal;
+@synthesize calcFlug;
 
 - (void)viewDidLoad
 {
@@ -28,11 +30,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+
 - (IBAction)inputNumber0:(id)sender {
     self.countNumber = (self.countNumber * 10 + 0);
     NSString *print = [[NSString alloc]initWithFormat:@"%d",self.countNumber];
-    self.numberOutput.text = print;
-}
+    self.numberOutput.text = print;}
 
 
 - (IBAction)inputNumber1:(id)sender {
@@ -86,5 +89,43 @@
         self.countNumber = (self.countNumber *10 + 9);
     NSString *print = [[NSString alloc]initWithFormat:@"%d",self.countNumber];
     self.numberOutput.text = print;}
+
+/*足し算*/
+- (IBAction)additionButton:(id)sender {
+    
+    self.subtotal += self.countNumber;
+    self.countNumber = 0;
+    self.calcFlug = 1;
+}
+
+/*引き算*/
+- (IBAction)subtractionButton:(id)sender {
+    
+    self.subtotal -=self.countNumber;
+    self.countNumber = 0;
+    self.calcFlug = 2;
+    
+}
+
+/*かけ算*/
+- (IBAction)multiplicationButton:(id)sender {
+  
+    self.subtotal *= self.countNumber;
+    self.countNumber = 0;
+    self.calcFlug = 3;
+    
+}
+
+/*割り算*/
+- (IBAction)divisionButton:(id)sender {
+
+    self.subtotal /= self.countNumber;
+    self.countNumber = 0;
+    self.calcFlug = 4;
+}
+
+        
+
+
 
 @end
