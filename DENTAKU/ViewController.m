@@ -90,7 +90,7 @@
     NSString *print = [[NSString alloc]initWithFormat:@"%d",self.countNumber];
     self.numberOutput.text = print;}
 
-/*足し算*/
+
 - (IBAction)additionButton:(id)sender {
     
     self.subtotal += self.countNumber;
@@ -98,7 +98,7 @@
     self.calcFlug = 1;
 }
 
-/*引き算*/
+
 - (IBAction)subtractionButton:(id)sender {
     
     self.subtotal -=self.countNumber;
@@ -107,7 +107,6 @@
     
 }
 
-/*かけ算*/
 - (IBAction)multiplicationButton:(id)sender {
   
     self.subtotal *= self.countNumber;
@@ -116,7 +115,6 @@
     
 }
 
-/*割り算*/
 - (IBAction)divisionButton:(id)sender {
 
     self.subtotal /= self.countNumber;
@@ -124,7 +122,27 @@
     self.calcFlug = 4;
 }
 
+switch (calcFlug) {
         
+        　　case 1: 
+        　　　　self.subtotal += self.countNumber;
+        　　　　break;
+        
+        　　case 2: 
+        　　　　self.subtotal -= self.countNumber;
+        　　　　break;
+        
+        　　case 3: 
+        　　　　self.subtotal *= self.countNumber;
+        　　　　break;
+        
+        　　case 4:
+        　　　　self.subtotal /= self.countNumber;
+        　　　　break;
+        
+        　　default:
+        　　　　break;
+}
 
 
 
