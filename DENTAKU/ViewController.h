@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+@property(nonatomic,assign)NSInteger buttonNumber;
+@property(nonatomic,assign)NSInteger countNumber;
+
 - (IBAction)inputNumber0:(id)sender;
 - (IBAction)inputNumber1:(id)sender;
 - (IBAction)inputNumber2:(id)sender;

@@ -13,6 +13,8 @@
 @end
 
 @implementation ViewController
+@synthesize buttonNumber;
+@synthesize countNumber;
 
 - (void)viewDidLoad
 {
@@ -27,62 +29,62 @@
 }
 
 - (IBAction)inputNumber0:(id)sender {
-    NSInteger num0 = 0;
-    NSString *print = [[NSString alloc]initWithFormat:@"%d",num0];
+    self.countNumber = (self.countNumber * 10 + 0);
+    NSString *print = [[NSString alloc]initWithFormat:@"%d",self.countNumber];
     self.numberOutput.text = print;
 }
 
 
 - (IBAction)inputNumber1:(id)sender {
-    NSInteger num1 = 1;
-    NSString *print = [[NSString alloc]initWithFormat:@"%d",num1];
+    self.countNumber = (self.countNumber * 10 + 1);
+    NSString *print = [[NSString alloc]initWithFormat:@"%d",self.countNumber];
     self.numberOutput.text = print;
 }
 
 - (IBAction)inputNumber2:(id)sender {
-    NSInteger num2 =2;
-    NSString *print = [[NSString alloc]initWithFormat:@"%d",num2];
+    self.countNumber = (self.countNumber *10 + 2);
+    NSString *print = [[NSString alloc]initWithFormat:@"%d",self.countNumber];
     self.numberOutput.text = print;
 }
 
 - (IBAction)inputNumber3:(id)sender {
-    NSInteger num3 =3;
-    NSString *print = [[NSString alloc]initWithFormat:@"%d",num3];
+    self.countNumber = (self.countNumber *10 + 3);
+    NSString *print = [[NSString alloc]initWithFormat:@"%d",self.countNumber];
     self.numberOutput.text = print;
 
 }
 
 - (IBAction)inputNumber4:(id)sender {
-    NSInteger num4 =4;
-    NSString *print = [[NSString alloc]initWithFormat:@"%d",num4];
+    self.countNumber = (self.countNumber *10 + 4);
+    NSString *print = [[NSString alloc]initWithFormat:@"%d",self.countNumber];
     self.numberOutput.text = print;
 }
 
 - (IBAction)inputNumber5:(id)sender {
-    NSInteger num5 =5;
-    NSString *print = [[NSString alloc]initWithFormat:@"%d",num5];
+    self.countNumber = (self.countNumber *10 + 5);
+    NSString *print = [[NSString alloc]initWithFormat:@"%d",self.countNumber];
     self.numberOutput.text = print;
 }
 
 - (IBAction)inputNumber6:(id)sender {
-    NSInteger num6 =6;
-    NSString *print = [[NSString alloc]initWithFormat:@"%d",num6];
+    self.countNumber = (self.countNumber *10 + 6);
+    NSString *print = [[NSString alloc]initWithFormat:@"%d",self.countNumber];
     self.numberOutput.text = print;
 }
 
 - (IBAction)inputNumber7:(id)sender {
-    NSInteger num7 =7;
-    NSString *print = [[NSString alloc]initWithFormat:@"%d",num7];
+    self.countNumber = (self.countNumber *10 + 7);
+    NSString *print = [[NSString alloc]initWithFormat:@"%d",self.countNumber];
     self.numberOutput.text = print;}
 
 - (IBAction)inputNumber8:(id)sender {
-    NSInteger num8 =8;
-    NSString *print = [[NSString alloc]initWithFormat:@"%d",num8];
+    self.countNumber = (self.countNumber *10 + 8);
+    NSString *print = [[NSString alloc]initWithFormat:@"%d",self.countNumber];
     self.numberOutput.text = print;}
 
 - (IBAction)inputNumber9:(id)sender {
-    NSInteger num9 =9;
-    NSString *print = [[NSString alloc]initWithFormat:@"%d",num9];
+        self.countNumber = (self.countNumber *10 + 9);
+    NSString *print = [[NSString alloc]initWithFormat:@"%d",self.countNumber];
     self.numberOutput.text = print;}
 
 @end
