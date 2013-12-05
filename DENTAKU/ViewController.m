@@ -35,7 +35,8 @@
 - (IBAction)inputNumber0:(id)sender {
     self.countNumber = (self.countNumber * 10 + 0);
     NSString *print = [[NSString alloc]initWithFormat:@"%d",self.countNumber];
-    self.numberOutput.text = print;}
+    self.numberOutput.text = print;
+}
 
 
 - (IBAction)inputNumber1:(id)sender {
@@ -78,17 +79,20 @@
 - (IBAction)inputNumber7:(id)sender {
     self.countNumber = (self.countNumber *10 + 7);
     NSString *print = [[NSString alloc]initWithFormat:@"%d",self.countNumber];
-    self.numberOutput.text = print;}
+    self.numberOutput.text = print;
+}
 
 - (IBAction)inputNumber8:(id)sender {
     self.countNumber = (self.countNumber *10 + 8);
     NSString *print = [[NSString alloc]initWithFormat:@"%d",self.countNumber];
-    self.numberOutput.text = print;}
+    self.numberOutput.text = print;
+}
 
 - (IBAction)inputNumber9:(id)sender {
         self.countNumber = (self.countNumber *10 + 9);
     NSString *print = [[NSString alloc]initWithFormat:@"%d",self.countNumber];
-    self.numberOutput.text = print;}
+    self.numberOutput.text = print;
+}
 
 
 - (IBAction)additionButton:(id)sender {
@@ -120,30 +124,37 @@
     self.subtotal /= self.countNumber;
     self.countNumber = 0;
     self.calcFlug = 4;
+    
+}
+            
+
+- (IBAction)clearButton:(id)sender {
+    self.subtotal =0;
+    self.countNumber = 0;
+    self.calcFlug =0;
+    self.buttonNumber = 0;
+    [self numberOutput];
+    
 }
 
-switch (calcFlug) {
-        
-        　　case 1: 
-        　　　　self.subtotal += self.countNumber;
-        　　　　break;
-        
-        　　case 2: 
-        　　　　self.subtotal -= self.countNumber;
-        　　　　break;
-        
-        　　case 3: 
-        　　　　self.subtotal *= self.countNumber;
-        　　　　break;
-        
-        　　case 4:
-        　　　　self.subtotal /= self.countNumber;
-        　　　　break;
-        
-        　　default:
-        　　　　break;
+- (IBAction)equalButton:(id)sender {
+    self.subtotal == self.countNumber;
+    self.countNumber = 0;
+switch(calcFlug) {
+    case 1:
+        self.subtotal += self.countNumber;
+        break;
+    case 2:
+        self.subtotal -= self.countNumber;
+        break;
+    case 3:
+        self.subtotal *= self.countNumber;
+        break;
+    case 4:
+        self.subtotal /= self.countNumber;
+        break;
+    default:
+        break;
 }
-
-
-
-@end
+}
+                      @end

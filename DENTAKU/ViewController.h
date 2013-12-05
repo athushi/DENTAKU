@@ -31,6 +31,16 @@
 - (IBAction)subtractionButton:(id)sender;
 - (IBAction)multiplicationButton:(id)sender;
 - (IBAction)divisionButton:(id)sender;
+- (IBAction)clearButton:(id)sender;
+
+- (IBAction)equalButton:(id)sender;
+
+
+
+
+
+
+
 
 
 @property (weak, nonatomic) IBOutlet UILabel *numberOutput;
