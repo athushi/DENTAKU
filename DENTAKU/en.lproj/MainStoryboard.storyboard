@@ -177,7 +177,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="divisionButton:" destination="2" eventType="touchUpInside" id="And-Uv-MaQ"/>
+                                    <action selector="divisionButton:" destination="2" eventType="touchUpInside" id="3gp-6y-h5r"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mck-vr-Qo2">
@@ -193,7 +193,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="multiplicationButton:" destination="2" eventType="touchUpInside" id="XeV-Sh-nBC"/>
+                                    <action selector="multiplicationButton:" destination="2" eventType="touchUpInside" id="sxA-6H-KWx"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W4L-f6-D4f">
@@ -220,7 +220,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="subtractionButton:" destination="2" eventType="touchUpInside" id="Dlb-i8-KMD"/>
+                                    <action selector="subtractionButton:" destination="2" eventType="touchUpInside" id="UGr-iC-jiJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="85r-NF-lW2">
@@ -233,7 +233,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="additionButton:" destination="2" eventType="touchUpInside" id="ErC-BK-dhf"/>
+                                    <action selector="additionButton:" destination="2" eventType="touchUpInside" id="qGm-eK-EoN"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zPq-Q7-SHA">
@@ -249,9 +249,6 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="clearButton:" destination="2" eventType="touchUpInside" id="fvd-Wq-ANd"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZVv-8o-sAj">
                                 <constraints>
@@ -266,7 +263,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="equalButton:" destination="2" eventType="touchUpInside" id="fU2-4N-EQN"/>
+                                    <action selector="answerButton:" destination="2" eventType="touchUpInside" id="xcm-Bo-VRA"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -351,9 +348,8 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
             <relationships>
                 <relationship kind="action" name="additionButton:"/>
-                <relationship kind="action" name="clearButton:"/>
+                <relationship kind="action" name="answerButton:"/>
                 <relationship kind="action" name="divisionButton:"/>
-                <relationship kind="action" name="equalButton:"/>
                 <relationship kind="action" name="inputNumber0:"/>
                 <relationship kind="action" name="inputNumber1:"/>
                 <relationship kind="action" name="inputNumber2:"/>

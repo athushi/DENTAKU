@@ -13,6 +13,7 @@
 @property(nonatomic,assign)NSInteger countNumber;
 @property(nonatomic,assign)NSInteger subtotal;
 @property(nonatomic,assign)NSInteger calcFlug;
+@property(nonatomic,assign)NSInteger calc;
 
 - (IBAction)inputNumber0:(id)sender;
 - (IBAction)inputNumber1:(id)sender;
@@ -28,17 +29,14 @@
 
 
 - (IBAction)additionButton:(id)sender;
+
 - (IBAction)subtractionButton:(id)sender;
+
 - (IBAction)multiplicationButton:(id)sender;
+
 - (IBAction)divisionButton:(id)sender;
-- (IBAction)clearButton:(id)sender;
 
-- (IBAction)equalButton:(id)sender;
-
-
-
-
-
+- (IBAction)answerButton:(id)sender;
 
 
 

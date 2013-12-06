@@ -17,6 +17,7 @@
 @synthesize countNumber;
 @synthesize subtotal;
 @synthesize calcFlug;
+@synthesize calc;
 
 - (void)viewDidLoad
 {
@@ -36,9 +37,9 @@
     self.countNumber = (self.countNumber * 10 + 0);
     NSString *print = [[NSString alloc]initWithFormat:@"%d",self.countNumber];
     self.numberOutput.text = print;
+
+
 }
-
-
 - (IBAction)inputNumber1:(id)sender {
     self.countNumber = (self.countNumber * 10 + 1);
     NSString *print = [[NSString alloc]initWithFormat:@"%d",self.countNumber];
@@ -94,53 +95,35 @@
     self.numberOutput.text = print;
 }
 
-
 - (IBAction)additionButton:(id)sender {
-    
-    self.subtotal += self.countNumber;
-    self.countNumber = 0;
+    [self calc];
     self.calcFlug = 1;
 }
 
-
 - (IBAction)subtractionButton:(id)sender {
-    
-    self.subtotal -=self.countNumber;
-    self.countNumber = 0;
+    [self calc];
     self.calcFlug = 2;
-    
 }
 
 - (IBAction)multiplicationButton:(id)sender {
-  
-    self.subtotal *= self.countNumber;
-    self.countNumber = 0;
+    [self calc];
     self.calcFlug = 3;
-    
 }
 
 - (IBAction)divisionButton:(id)sender {
-
-    self.subtotal /= self.countNumber;
-    self.countNumber = 0;
+    [self calc];
     self.calcFlug = 4;
-    
-}
-            
-
-- (IBAction)clearButton:(id)sender {
-    self.subtotal =0;
-    self.countNumber = 0;
-    self.calcFlug =0;
-    self.buttonNumber = 0;
-    [self numberOutput];
-    
 }
 
-- (IBAction)equalButton:(id)sender {
-    self.subtotal == self.countNumber;
-    self.countNumber = 0;
-switch(calcFlug) {
+- (IBAction)answerButton:(id)sender {
+    [self calc];
+    self.calcFlug = 0;
+    self.subtotal = 0;
+}
+
+
+(void)calc{
+switch (calcFlug) {
     case 1:
         self.subtotal += self.countNumber;
         break;
@@ -155,6 +138,16 @@ switch(calcFlug) {
         break;
     default:
         break;
+    
 }
+    self.countNumber = self.subtotal;
+    [self numberOutput];
+    self.countNumber = 0;
 }
+
+
+
+
+
+
                       @end
