@@ -34,66 +34,65 @@
 
 
 - (IBAction)inputNumber0:(id)sender {
-    self.countNumber = (self.countNumber * 10 + 0);
-    NSString *print = [[NSString alloc]initWithFormat:@"%d",self.countNumber];
-    self.numberOutput.text = print;
-
+    self.buttonNumber = 0;
+    [self labelOutput];
 
 }
 - (IBAction)inputNumber1:(id)sender {
-    self.countNumber = (self.countNumber * 10 + 1);
-    NSString *print = [[NSString alloc]initWithFormat:@"%d",self.countNumber];
-    self.numberOutput.text = print;
+    self.buttonNumber = 1;
+    [self labelOutput];
 }
 
 - (IBAction)inputNumber2:(id)sender {
-    self.countNumber = (self.countNumber *10 + 2);
-    NSString *print = [[NSString alloc]initWithFormat:@"%d",self.countNumber];
-    self.numberOutput.text = print;
+    self.buttonNumber = 2;
+    [self labelOutput];
 }
 
 - (IBAction)inputNumber3:(id)sender {
-    self.countNumber = (self.countNumber *10 + 3);
-    NSString *print = [[NSString alloc]initWithFormat:@"%d",self.countNumber];
-    self.numberOutput.text = print;
-
+    self.buttonNumber = 3;
+    [self labelOutput];
 }
 
 - (IBAction)inputNumber4:(id)sender {
-    self.countNumber = (self.countNumber *10 + 4);
-    NSString *print = [[NSString alloc]initWithFormat:@"%d",self.countNumber];
-    self.numberOutput.text = print;
+    self.buttonNumber = 4;
+    [self labelOutput];
 }
 
 - (IBAction)inputNumber5:(id)sender {
-    self.countNumber = (self.countNumber *10 + 5);
-    NSString *print = [[NSString alloc]initWithFormat:@"%d",self.countNumber];
-    self.numberOutput.text = print;
+    self.buttonNumber = 5;
+    [self labelOutput];
 }
 
 - (IBAction)inputNumber6:(id)sender {
-    self.countNumber = (self.countNumber *10 + 6);
-    NSString *print = [[NSString alloc]initWithFormat:@"%d",self.countNumber];
-    self.numberOutput.text = print;
+   
+    self.buttonNumber = 6;
+    [self labelOutput];
 }
 
 - (IBAction)inputNumber7:(id)sender {
-    self.countNumber = (self.countNumber *10 + 7);
-    NSString *print = [[NSString alloc]initWithFormat:@"%d",self.countNumber];
-    self.numberOutput.text = print;
+    self.buttonNumber = 7;
+    [self labelOutput];
 }
 
 - (IBAction)inputNumber8:(id)sender {
-    self.countNumber = (self.countNumber *10 + 8);
-    NSString *print = [[NSString alloc]initWithFormat:@"%d",self.countNumber];
-    self.numberOutput.text = print;
+    self.buttonNumber = 8;
+    [self labelOutput];
 }
 
 - (IBAction)inputNumber9:(id)sender {
-        self.countNumber = (self.countNumber *10 + 9);
-    NSString *print = [[NSString alloc]initWithFormat:@"%d",self.countNumber];
+    self.buttonNumber = 9;
+    [self labelOutput];
+}
+
+
+
+- (void)labelOutput{
+    self.countNumber = (self.countNumber * 10) + self.buttonNumber;
+    NSString *print = [[NSString alloc] initWithFormat:@"%d", self.countNumber];
     self.numberOutput.text = print;
 }
+
+
 
 - (IBAction)additionButton:(id)sender {
     [self calc];
@@ -119,31 +118,34 @@
     [self calc];
     self.calcFlug = 0;
     self.subtotal = 0;
+
 }
 
-
-(void)calc{
-switch (calcFlug) {
-    case 1:
-        self.subtotal += self.countNumber;
-        break;
-    case 2:
-        self.subtotal -= self.countNumber;
-        break;
-    case 3:
-        self.subtotal *= self.countNumber;
-        break;
-    case 4:
-        self.subtotal /= self.countNumber;
-        break;
-    default:
-        break;
-    
-}
+ -(void)calc{
+    switch (calcFlug) {
+        case 1:
+            self.subtotal += self.countNumber;
+            break;
+        case 2:
+            self.subtotal -= self.countNumber;
+            break;
+        case 3:
+            self.subtotal *= self.countNumber;
+            break;
+        case 4:
+            self.subtotal /= self.countNumber;
+            break;
+        default:
+            break;
+            
+            
+    }
     self.countNumber = self.subtotal;
-    [self numberOutput];
+    
+    [self labelOutput];
     self.countNumber = 0;
 }
+
 
 
 
