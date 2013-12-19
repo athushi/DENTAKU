@@ -8,16 +8,17 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController (){
+    double x;
+    double y;
+    int z;
+}
+
 
 @end
 
 @implementation ViewController
-@synthesize buttonNumber;
-@synthesize countNumber;
-@synthesize subtotal;
-@synthesize calcFlug;
-@synthesize calc;
+
 
 - (void)viewDidLoad
 {
@@ -34,122 +35,127 @@
 
 
 - (IBAction)inputNumber0:(id)sender {
-    self.buttonNumber = 0;
-    [self labelOutput];
+    x=x*10+0;
+    self.numberOutput.text = [NSString stringWithFormat:@"%g",x];
 
+    
 }
 - (IBAction)inputNumber1:(id)sender {
-    self.buttonNumber = 1;
-    [self labelOutput];
+    
+    x=x*10+1;
+    self.numberOutput.text = [NSString stringWithFormat:@"%g",x];
 }
 
 - (IBAction)inputNumber2:(id)sender {
-    self.buttonNumber = 2;
-    [self labelOutput];
+    x=x*10+2;
+    self.numberOutput.text = [NSString stringWithFormat:@"%g",x];
 }
 
 - (IBAction)inputNumber3:(id)sender {
-    self.buttonNumber = 3;
-    [self labelOutput];
+    x=x*10+3;
+    self.numberOutput.text = [NSString stringWithFormat:@"%g",x];
 }
 
 - (IBAction)inputNumber4:(id)sender {
-    self.buttonNumber = 4;
-    [self labelOutput];
+    x=x*10+4;
+    self.numberOutput.text = [NSString stringWithFormat:@"%g",x];
+
+    
 }
 
 - (IBAction)inputNumber5:(id)sender {
-    self.buttonNumber = 5;
-    [self labelOutput];
+    x=x*10+5;
+    self.numberOutput.text = [NSString stringWithFormat:@"%g",x];
+
 }
 
 - (IBAction)inputNumber6:(id)sender {
+    x=x*10+6;
+    self.numberOutput.text = [NSString stringWithFormat:@"%g",x];
+
    
-    self.buttonNumber = 6;
-    [self labelOutput];
 }
 
 - (IBAction)inputNumber7:(id)sender {
-    self.buttonNumber = 7;
-    [self labelOutput];
+    x=x*10+7;
+    self.numberOutput.text = [NSString stringWithFormat:@"%g",x];
+
 }
 
 - (IBAction)inputNumber8:(id)sender {
-    self.buttonNumber = 8;
-    [self labelOutput];
+    x=x*10+8;
+    self.numberOutput.text = [NSString stringWithFormat:@"%g",x];
+
 }
 
 - (IBAction)inputNumber9:(id)sender {
-    self.buttonNumber = 9;
-    [self labelOutput];
-}
+    x=x*10+9;
+    self.numberOutput.text = [NSString stringWithFormat:@"%g",x];
 
-
-
-- (void)labelOutput{
-    self.countNumber = (self.countNumber * 10) + self.buttonNumber;
-    NSString *print = [[NSString alloc] initWithFormat:@"%d", self.countNumber];
-    self.numberOutput.text = print;
 }
 
 
 
 - (IBAction)additionButton:(id)sender {
-    [self calc];
-    self.calcFlug = 1;
+    
+    z=1;
+    y=x;
+    x=0;
+    
 }
 
 - (IBAction)subtractionButton:(id)sender {
-    [self calc];
-    self.calcFlug = 2;
+    
+    z=2;
+    y=x;
+    x=0;
 }
 
 - (IBAction)multiplicationButton:(id)sender {
-    [self calc];
-    self.calcFlug = 3;
+    
+    z=3;
+    y=x;
+    x=0;
 }
 
 - (IBAction)divisionButton:(id)sender {
-    [self calc];
-    self.calcFlug = 4;
+    
+    z=4;
+    y=x;
+    x=0;
 }
 
 - (IBAction)answerButton:(id)sender {
-    [self calc];
-    self.calcFlug = 0;
-    self.subtotal = 0;
-
-}
-
- -(void)calc{
-    switch (calcFlug) {
+    switch (z) {
         case 1:
-            self.subtotal += self.countNumber;
+             x=x+y;
             break;
         case 2:
-            self.subtotal -= self.countNumber;
+            x=x-y;
             break;
         case 3:
-            self.subtotal *= self.countNumber;
+            x=x*y;
             break;
         case 4:
-            self.subtotal /= self.countNumber;
+            x=x/y;
             break;
+            
         default:
             break;
-            
-            
     }
-    self.countNumber = self.subtotal;
-    
-    [self labelOutput];
-    self.countNumber = 0;
+   
+    self.numberOutput.text = [NSString stringWithFormat:@"%g",x];
+
 }
 
 
+- (IBAction)clearButton:(id)sender {
+    x=0;
+    y=0;
+    z=0;
+    self.numberOutput.text = [NSString stringWithFormat:@"%g",x];
+    
+   
+}
 
-
-
-
-
-                      @end
+@end

@@ -43,4 +43,5 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *numberOutput;
 
+- (IBAction)clearButton:(id)sender;
 @end
