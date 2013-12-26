@@ -11,7 +11,8 @@
 @interface ViewController (){
     double x;
     double y;
-    int z;
+    int pattern;
+    int zei;
 }
 
 
@@ -98,7 +99,7 @@
 
 - (IBAction)additionButton:(id)sender {
     
-    z=1;
+    pattern=1;
     y=x;
     x=0;
     
@@ -106,38 +107,40 @@
 
 - (IBAction)subtractionButton:(id)sender {
     
-    z=2;
+    pattern=2;
     y=x;
     x=0;
+    
 }
 
 - (IBAction)multiplicationButton:(id)sender {
     
-    z=3;
+    pattern=3;
     y=x;
     x=0;
+    
 }
 
 - (IBAction)divisionButton:(id)sender {
     
-    z=4;
+    pattern=4;
     y=x;
     x=0;
 }
 
 - (IBAction)answerButton:(id)sender {
-    switch (z) {
+    switch (pattern) {
         case 1:
-             x=x+y;
+             x=y+x;
             break;
         case 2:
-            x=x-y;
+            x=y-x;
             break;
         case 3:
-            x=x*y;
+            x=y*x;
             break;
         case 4:
-            x=x/y;
+            x=y/x;
             break;
             
         default:
@@ -148,11 +151,32 @@
 
 }
 
+- (IBAction)zeiButton:(id)sender {
+    if(x >= 13){
+    zei = x + (x*0.08);
+    self.numberOutput.text = [NSString stringWithFormat:@"￥%d",zei];
+    }else{
+    self.numberOutput.text = [NSString stringWithFormat:@"%d",zei];
+    }
+    }
+
+
+
+- (IBAction)zeinuki:(id)sender {
+    if(x >= 13){
+    zei = x - (x*0.08);
+    self.numberOutput.text = [NSString stringWithFormat:@"￥%d",zei];
+    }else{
+    self.numberOutput.text = [NSString stringWithFormat:@"%d",zei];
+    }
+    }
+
 
 - (IBAction)clearButton:(id)sender {
     x=0;
     y=0;
-    z=0;
+    pattern=0;
+    zei = 0;
     self.numberOutput.text = [NSString stringWithFormat:@"%g",x];
     
    

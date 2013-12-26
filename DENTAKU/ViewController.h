@@ -40,7 +40,9 @@
 
 
 
+- (IBAction)zeiButton:(id)sender;
 
+- (IBAction)zeinuki:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *numberOutput;
 
 - (IBAction)clearButton:(id)sender;
