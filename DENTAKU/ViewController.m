@@ -157,6 +157,9 @@
     self.numberOutput.text = [NSString stringWithFormat:@"￥%d",zei];
     }else{
     self.numberOutput.text = [NSString stringWithFormat:@"%d",zei];
+        x = 0;
+        y = 0;
+        zei = 0;
     }
     }
 
@@ -168,6 +171,9 @@
     self.numberOutput.text = [NSString stringWithFormat:@"￥%d",zei];
     }else{
     self.numberOutput.text = [NSString stringWithFormat:@"%d",zei];
+        x = 0;
+        y = 0;
+        zei = 0;
     }
     }
 
